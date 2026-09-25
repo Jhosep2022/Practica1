@@ -1,0 +1,5 @@
+$ python scripts/generar_tabla.py tests/datos/invalido_sin_partidos.csv
+
+ERROR: El archivo 'tests\datos\invalido_sin_partidos.csv' no contiene ningún partido (solo encabezados).
+
+(código de salida: 1)

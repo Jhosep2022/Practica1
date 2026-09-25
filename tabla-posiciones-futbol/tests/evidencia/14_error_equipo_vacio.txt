@@ -1,0 +1,5 @@
+$ python scripts/generar_tabla.py tests/datos/invalido_equipo_vacio.csv
+
+ERROR: Fila 2: el nombre del equipo local está vacío.
+
+(código de salida: 1)

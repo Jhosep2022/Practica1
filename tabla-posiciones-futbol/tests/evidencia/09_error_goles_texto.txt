@@ -1,0 +1,5 @@
+$ python scripts/generar_tabla.py tests/datos/invalido_goles_texto.csv
+
+ERROR: Fila 3: los goles del equipo local deben ser un número entero, se encontró 'dos'.
+
+(código de salida: 1)

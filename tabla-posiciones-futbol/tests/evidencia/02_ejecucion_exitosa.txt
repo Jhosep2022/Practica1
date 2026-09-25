@@ -1,0 +1,23 @@
+$ python scripts/generar_tabla.py assets/ejemplo_liga.csv --salida reporte.html
+
+
+TABLA DE POSICIONES
+  #  Equipo              PJ  PG  PE  PP  GF  GC   DG  Pts
+---------------------------------------------------------
+  1  Bolívar              5   4   1   0   9   3   +6   13
+  2  Wilstermann          5   2   2   1   6   6    0    8
+  3  Oriente Petrolero    5   2   1   2   8   6   +2    7
+  4  Always Ready         5   2   1   2   8   6   +2    7
+  5  The Strongest        5   1   1   3   8  12   -4    4
+  6  Blooming             5   0   2   3   4  10   -6    2
+
+ESTADÍSTICAS DESTACADAS
+  Equipo más goleador  : Bolívar (9 goles a favor)
+  Mejor defensa        : Bolívar (3 goles en contra)
+  Partido con más goles: The Strongest 4 - 2 Blooming (6 goles, 2026-09-29)
+  Partidos jugados     : 15
+  Promedio de goles    : 2.87 por partido
+
+Reporte HTML generado en: C:\Users\aleja\AppData\Local\Temp\demo.html
+
+(código de salida: 0)

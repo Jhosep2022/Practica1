@@ -1,0 +1,5 @@
+$ python scripts/generar_tabla.py tests/datos/invalido_equipo_contra_si_mismo.csv
+
+ERROR: Fila 3: el equipo 'Bolivar' no puede jugar contra sí mismo.
+
+(código de salida: 1)

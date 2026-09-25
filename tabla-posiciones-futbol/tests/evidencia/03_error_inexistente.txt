@@ -1,0 +1,5 @@
+$ python scripts/generar_tabla.py tests/datos/no_existe.csv
+
+ERROR: El archivo 'tests\datos\no_existe.csv' no existe.
+
+(código de salida: 1)

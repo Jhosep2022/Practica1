@@ -1,0 +1,5 @@
+$ python scripts/generar_tabla.py tests/datos/invalido_fecha.csv
+
+ERROR: Fila 2: la fecha '01/09/2026' no tiene el formato válido AAAA-MM-DD (ejemplo: 2026-09-01).
+
+(código de salida: 1)

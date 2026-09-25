@@ -1,0 +1,5 @@
+$ python scripts/generar_tabla.py tests/datos/no_es_csv.txt
+
+ERROR: El archivo 'tests\datos\no_es_csv.txt' no es un CSV (se esperaba la extensión .csv).
+
+(código de salida: 1)

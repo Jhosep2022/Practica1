@@ -1,0 +1,5 @@
+$ python scripts/generar_tabla.py tests/datos/invalido_vacio.csv
+
+ERROR: El archivo CSV está vacío: no tiene fila de encabezados.
+
+(código de salida: 1)
