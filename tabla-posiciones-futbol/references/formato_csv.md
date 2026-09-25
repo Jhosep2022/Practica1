@@ -66,8 +66,12 @@ fecha,local,visitante,goles_local
 ```csv
 fecha,equipo_local,visitante,goles_local,goles_visitante
 ```
-`equipo_local` no es un nombre reconocido, así que se reporta a la vez la columna
-faltante (`local`) y la no reconocida.
+> `ERROR: Faltan columnas obligatorias en el CSV: local. Se esperaban exactamente: fecha, local, visitante, goles_local, goles_visitante.`
+
+Al escribir `equipo_local` en lugar de `local`, la columna `local` pasa a faltar. El script
+revisa primero las columnas faltantes, así que ese es el mensaje que verás; una vez
+corregido, si sobrara alguna columna extra, aparecería el mensaje
+`El CSV tiene columnas no reconocidas: ...`.
 
 ### Goles no numéricos
 
