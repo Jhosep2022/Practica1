@@ -30,3 +30,6 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Documentacion de la skill tabla-posiciones-futbol (debe versionarse)
+!tabla-posiciones-futbol/**/*.md
