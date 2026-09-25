@@ -47,7 +47,7 @@ def validar_archivo(ruta_texto):
         raise ErrorDatos("La ruta '{}' no es un archivo.".format(ruta))
     if ruta.suffix.lower() != ".csv":
         raise ErrorDatos(
-            "El archivo '{}' no es un CSV (se esperaba la extension .csv).".format(ruta)
+            "El archivo '{}' no es un CSV (se esperaba la extensión .csv).".format(ruta)
         )
     return ruta
 
@@ -55,10 +55,10 @@ def validar_archivo(ruta_texto):
 def validar_encabezados(encabezados):
     """Verifica que el CSV traiga exactamente las columnas requeridas."""
     if not encabezados:
-        raise ErrorDatos("El archivo CSV esta vacio: no tiene fila de encabezados.")
+        raise ErrorDatos("El archivo CSV está vacío: no tiene fila de encabezados.")
 
     # Se limpian espacios y BOM para que un CSV exportado de Excel siga siendo valido.
-    limpios = [(columna or "").strip().lstrip("﻿").lower() for columna in encabezados]
+    limpios = [(columna or "").strip().lstrip("\ufeff").lower() for columna in encabezados]
 
     faltantes = [columna for columna in COLUMNAS_REQUERIDAS if columna not in limpios]
     if faltantes:
@@ -85,12 +85,12 @@ def validar_fecha(valor, numero_fila):
     """Valida que la fecha tenga el formato AAAA-MM-DD y sea una fecha real."""
     texto = (valor or "").strip()
     if not texto:
-        raise ErrorDatos("Fila {}: la fecha esta vacia.".format(numero_fila))
+        raise ErrorDatos("Fila {}: la fecha está vacía.".format(numero_fila))
     try:
         return datetime.strptime(texto, "%Y-%m-%d").date()
     except ValueError:
         raise ErrorDatos(
-            "Fila {}: la fecha '{}' no tiene el formato valido AAAA-MM-DD "
+            "Fila {}: la fecha '{}' no tiene el formato válido AAAA-MM-DD "
             "(ejemplo: 2026-09-01).".format(numero_fila, texto)
         )
 
@@ -100,7 +100,7 @@ def validar_equipo(valor, numero_fila, etiqueta):
     nombre = (valor or "").strip()
     if not nombre:
         raise ErrorDatos(
-            "Fila {}: el nombre del equipo {} esta vacio.".format(numero_fila, etiqueta)
+            "Fila {}: el nombre del equipo {} está vacío.".format(numero_fila, etiqueta)
         )
     return nombre
 
@@ -110,19 +110,19 @@ def validar_goles(valor, numero_fila, etiqueta):
     texto = (valor or "").strip()
     if not texto:
         raise ErrorDatos(
-            "Fila {}: los goles del {} estan vacios.".format(numero_fila, etiqueta)
+            "Fila {}: los goles del {} están vacíos.".format(numero_fila, etiqueta)
         )
     try:
         goles = int(texto)
     except ValueError:
         raise ErrorDatos(
-            "Fila {}: los goles del {} deben ser un numero entero, "
-            "se encontro '{}'.".format(numero_fila, etiqueta, texto)
+            "Fila {}: los goles del {} deben ser un número entero, "
+            "se encontró '{}'.".format(numero_fila, etiqueta, texto)
         )
     if goles < 0:
         raise ErrorDatos(
             "Fila {}: los goles del {} no pueden ser negativos, "
-            "se encontro '{}'.".format(numero_fila, etiqueta, goles)
+            "se encontró '{}'.".format(numero_fila, etiqueta, goles)
         )
     return goles
 
@@ -141,7 +141,7 @@ def validar_fila(fila, numero_fila):
 
     if partido["local"].casefold() == partido["visitante"].casefold():
         raise ErrorDatos(
-            "Fila {}: el equipo '{}' no puede jugar contra si mismo.".format(
+            "Fila {}: el equipo '{}' no puede jugar contra sí mismo.".format(
                 numero_fila, partido["local"]
             )
         )
@@ -169,14 +169,14 @@ def leer_partidos(ruta_texto):
     except UnicodeDecodeError:
         raise ErrorDatos(
             "El archivo '{}' no se pudo leer como texto UTF-8. "
-            "Guardalo nuevamente con codificacion UTF-8.".format(ruta)
+            "Guárdalo nuevamente con codificación UTF-8.".format(ruta)
         )
     except OSError as error:
         raise ErrorDatos("No se pudo abrir el archivo '{}': {}".format(ruta, error))
 
     if not partidos:
         raise ErrorDatos(
-            "El archivo '{}' no contiene ningun partido (solo encabezados).".format(ruta)
+            "El archivo '{}' no contiene ningún partido (solo encabezados).".format(ruta)
         )
 
     return partidos
@@ -394,13 +394,13 @@ def _construir_tarjetas(estadisticas):
     )
 
     tarjetas = [
-        ("Equipo mas goleador",
+        ("Equipo más goleador",
          _escapar(estadisticas["mas_goleador"]["equipo"]),
          "{} goles a favor".format(estadisticas["mas_goleador"]["gf"])),
         ("Mejor defensa",
          _escapar(estadisticas["mejor_defensa"]["equipo"]),
          "{} goles en contra".format(estadisticas["mejor_defensa"]["gc"])),
-        ("Partido con mas goles",
+        ("Partido con más goles",
          resumen_partido,
          "{} goles el {}".format(estadisticas["goles_partido_top"], partido["fecha"])),
         ("Partidos jugados",
@@ -428,8 +428,8 @@ def cargar_plantilla(ruta_plantilla=RUTA_PLANTILLA):
     ruta = Path(ruta_plantilla)
     if not ruta.is_file():
         raise ErrorDatos(
-            "No se encontro la plantilla '{}'. "
-            "Verifica que la carpeta assets/ este completa.".format(ruta)
+            "No se encontró la plantilla '{}'. "
+            "Verifica que la carpeta assets/ esté completa.".format(ruta)
         )
     return ruta.read_text(encoding="utf-8")
 
@@ -490,12 +490,12 @@ def formatear_resumen(clasificacion, estadisticas):
     partido = estadisticas["partido_top"]
     lineas.extend([
         "",
-        "ESTADISTICAS DESTACADAS",
-        "  Equipo mas goleador  : {} ({} goles a favor)".format(
+        "ESTADÍSTICAS DESTACADAS",
+        "  Equipo más goleador  : {} ({} goles a favor)".format(
             estadisticas["mas_goleador"]["equipo"], estadisticas["mas_goleador"]["gf"]),
         "  Mejor defensa        : {} ({} goles en contra)".format(
             estadisticas["mejor_defensa"]["equipo"], estadisticas["mejor_defensa"]["gc"]),
-        "  Partido con mas goles: {} {} - {} {} ({} goles, {})".format(
+        "  Partido con más goles: {} {} - {} {} ({} goles, {})".format(
             partido["local"], partido["goles_local"],
             partido["goles_visitante"], partido["visitante"],
             estadisticas["goles_partido_top"], partido["fecha"]),
