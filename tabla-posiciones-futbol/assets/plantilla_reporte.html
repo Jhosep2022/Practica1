@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+  Plantilla del reporte de la skill tabla-posiciones-futbol.
+  El script scripts/generar_tabla.py reemplaza estos marcadores:
+    {{TITULO}}           -> titulo del reporte
+    {{ARCHIVO_ORIGEN}}   -> nombre del CSV procesado
+    {{FECHA_GENERACION}} -> fecha en que se genero el reporte
+    {{FILAS_TABLA}}      -> filas <tr> de la tabla de posiciones
+    {{TARJETAS}}         -> tarjetas de estadisticas destacadas
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITULO}}</title>
+  <style>
+    :root {
+      --fondo: #0f172a;
+      --panel: #ffffff;
+      --borde: #e2e8f0;
+      --texto: #1e293b;
+      --suave: #64748b;
+      --acento: #15803d;
+      --acento-claro: #dcfce7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+    }
+
+    .contenedor {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      color: #f8fafc;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin: 0;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: 17px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--suave);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead th {
+      text-align: center;
+      padding: 10px 6px;
+      border-bottom: 2px solid var(--borde);
+      color: var(--suave);
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    thead th:nth-child(2) { text-align: left; }
+
+    tbody td {
+      text-align: center;
+      padding: 10px 6px;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    tbody tr:nth-child(odd) { background: #f8fafc; }
+
+    td.pos {
+      font-weight: 700;
+      color: var(--suave);
+      width: 40px;
+    }
+
+    td.equipo {
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td.pts {
+      font-weight: 700;
+      color: var(--acento);
+      background: var(--acento-claro);
+    }
+
+    .tarjetas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tarjeta {
+      flex: 1 1 180px;
+      border: 1px solid var(--borde);
+      border-left: 4px solid var(--acento);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: #f8fafc;
+    }
+
+    .tarjeta-titulo {
+      margin: 0;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--suave);
+    }
+
+    .tarjeta-valor {
+      margin: 6px 0 2px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .tarjeta-detalle {
+      margin: 0;
+      font-size: 12px;
+      color: var(--suave);
+    }
+
+    footer {
+      text-align: center;
+      color: #64748b;
+      font-size: 12px;
+      padding-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      thead th, tbody td { padding: 8px 3px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <header>
+      <h1>{{TITULO}}</h1>
+      <p>Generado a partir de {{ARCHIVO_ORIGEN}} el {{FECHA_GENERACION}}</p>
+    </header>
+
+    <section class="panel">
+      <h2>Clasificacion</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Equipo</th>
+            <th>PJ</th><th>PG</th><th>PE</th><th>PP</th>
+            <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+{{FILAS_TABLA}}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Estadisticas destacadas</h2>
+      <div class="tarjetas">
+{{TARJETAS}}
+      </div>
+    </section>
+
+    <footer>
+      Victoria 3 pts &middot; Empate 1 pt &middot; Derrota 0 pts &middot;
+      desempates por DG, GF, enfrentamiento directo y orden alfabetico
+    </footer>
+  </div>
+</body>
+</html>
