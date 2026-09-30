@@ -29,8 +29,11 @@ function App() {
   }, [search])
 
   function addToCart(product) {
-    cart.push({ ...product, quantity: 1 })
-    setCart(cart)
+    if (cart.some((item) => item.id === product.id)) {
+      return
+    }
+
+    setCart([...cart, { ...product, quantity: 1 }])
   }
 
   function changeQty(index, delta) {
@@ -94,7 +97,12 @@ function App() {
 
         <div className="grid">
           {visibleProducts.map((p) => (
-            <ProductCard key={p.id} product={p} onAdd={() => addToCart(p)} />
+            <ProductCard
+              key={p.id}
+              product={p}
+              onAdd={() => addToCart(p)}
+              isInCart={cart.some((item) => item.id === p.id)}
+            />
           ))}
         </div>
       </main>

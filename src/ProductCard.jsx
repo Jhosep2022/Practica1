@@ -1,4 +1,4 @@
-function ProductCard({ product, onAdd }) {
+function ProductCard({ product, onAdd, isInCart }) {
   return (
     <article className="card">
       <img src={product.thumbnail} alt={product.title} />
@@ -7,8 +7,8 @@ function ProductCard({ product, onAdd }) {
       <p className="meta">
         Rating: {product.rating.toFixed(1)} · Stock: {product.stock}
       </p>
-      <button className="add-btn" onClick={onAdd}>
-        Agregar
+      <button className="add-btn" onClick={onAdd} disabled={isInCart}>
+        {isInCart ? 'Agregado' : 'Agregar'}
       </button>
     </article>
   )

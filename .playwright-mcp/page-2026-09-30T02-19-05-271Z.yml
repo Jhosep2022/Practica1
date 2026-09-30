@@ -1,0 +1,13 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - heading "Tienda Tech" [level=1] [ref=e5]
+    - searchbox "Buscar productos" [ref=e6]
+    - combobox "Filtrar por categoría" [ref=e7]:
+      - option "Todas" [selected]
+      - option "beauty"
+      - option "fragrances"
+      - option "furniture"
+      - option "groceries"
+    - button "Carrito (0)" [ref=e8] [cursor=pointer]
+  - main [ref=e9]:
+    - paragraph [ref=e10]: Cargando...

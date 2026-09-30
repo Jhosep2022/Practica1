@@ -1,0 +1,225 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - heading "Tienda Tech" [level=1] [ref=e5]
+    - searchbox "Buscar productos" [ref=e6]
+    - combobox "Filtrar por categoría" [ref=e7]:
+      - option "Todas" [selected]
+      - option "beauty"
+      - option "fragrances"
+      - option "furniture"
+      - option "groceries"
+    - button "Carrito (3)" [active] [ref=e196] [cursor=pointer]
+  - main [ref=e9]:
+    - generic [ref=e11]:
+      - article [ref=e12]:
+        - img "Essence Mascara Lash Princess" [ref=e13]
+        - heading "Essence Mascara Lash Princess" [level=3] [ref=e14]
+        - paragraph [ref=e15]: $9.99
+        - paragraph [ref=e16]: "Rating: 2.6 · Stock: 99"
+        - button "Agregado" [disabled] [ref=e193] [cursor=pointer]
+      - article [ref=e18]:
+        - img "Eyeshadow Palette with Mirror" [ref=e19]
+        - heading "Eyeshadow Palette with Mirror" [level=3] [ref=e20]
+        - paragraph [ref=e21]: $19.99
+        - paragraph [ref=e22]: "Rating: 2.9 · Stock: 34"
+        - button "Agregado" [disabled] [ref=e195] [cursor=pointer]
+      - article [ref=e24]:
+        - img "Powder Canister" [ref=e25]
+        - heading "Powder Canister" [level=3] [ref=e26]
+        - paragraph [ref=e27]: $14.99
+        - paragraph [ref=e28]: "Rating: 4.6 · Stock: 89"
+        - button "Agregar" [ref=e29] [cursor=pointer]
+      - article [ref=e30]:
+        - img "Red Lipstick" [ref=e31]
+        - heading "Red Lipstick" [level=3] [ref=e32]
+        - paragraph [ref=e33]: $12.99
+        - paragraph [ref=e34]: "Rating: 4.4 · Stock: 91"
+        - button "Agregar" [ref=e35] [cursor=pointer]
+      - article [ref=e36]:
+        - img "Red Nail Polish" [ref=e37]
+        - heading "Red Nail Polish" [level=3] [ref=e38]
+        - paragraph [ref=e39]: $8.99
+        - paragraph [ref=e40]: "Rating: 4.3 · Stock: 79"
+        - button "Agregar" [ref=e41] [cursor=pointer]
+      - article [ref=e42]:
+        - img "Calvin Klein CK One" [ref=e43]
+        - heading "Calvin Klein CK One" [level=3] [ref=e44]
+        - paragraph [ref=e45]: $49.99
+        - paragraph [ref=e46]: "Rating: 4.4 · Stock: 29"
+        - button "Agregar" [ref=e47] [cursor=pointer]
+      - article [ref=e48]:
+        - img "Chanel Coco Noir Eau De" [ref=e49]
+        - heading "Chanel Coco Noir Eau De" [level=3] [ref=e50]
+        - paragraph [ref=e51]: $129.99
+        - paragraph [ref=e52]: "Rating: 4.3 · Stock: 58"
+        - button "Agregado" [disabled] [ref=e197] [cursor=pointer]
+      - article [ref=e54]:
+        - img "Dior J'adore" [ref=e55]
+        - heading "Dior J'adore" [level=3] [ref=e56]
+        - paragraph [ref=e57]: $89.99
+        - paragraph [ref=e58]: "Rating: 3.8 · Stock: 98"
+        - button "Agregar" [ref=e59] [cursor=pointer]
+      - article [ref=e60]:
+        - img "Dolce Shine Eau de" [ref=e61]
+        - heading "Dolce Shine Eau de" [level=3] [ref=e62]
+        - paragraph [ref=e63]: $69.99
+        - paragraph [ref=e64]: "Rating: 4.0 · Stock: 4"
+        - button "Agregar" [ref=e65] [cursor=pointer]
+      - article [ref=e66]:
+        - img "Gucci Bloom Eau de" [ref=e67]
+        - heading "Gucci Bloom Eau de" [level=3] [ref=e68]
+        - paragraph [ref=e69]: $79.99
+        - paragraph [ref=e70]: "Rating: 2.7 · Stock: 91"
+        - button "Agregar" [ref=e71] [cursor=pointer]
+      - article [ref=e72]:
+        - img "Annibale Colombo Bed" [ref=e73]
+        - heading "Annibale Colombo Bed" [level=3] [ref=e74]
+        - paragraph [ref=e75]: $1899.99
+        - paragraph [ref=e76]: "Rating: 4.8 · Stock: 88"
+        - button "Agregar" [ref=e77] [cursor=pointer]
+      - article [ref=e78]:
+        - img "Annibale Colombo Sofa" [ref=e79]
+        - heading "Annibale Colombo Sofa" [level=3] [ref=e80]
+        - paragraph [ref=e81]: $2499.99
+        - paragraph [ref=e82]: "Rating: 3.9 · Stock: 60"
+        - button "Agregar" [ref=e83] [cursor=pointer]
+      - article [ref=e84]:
+        - img "Bedside Table African Cherry" [ref=e85]
+        - heading "Bedside Table African Cherry" [level=3] [ref=e86]
+        - paragraph [ref=e87]: $299.99
+        - paragraph [ref=e88]: "Rating: 2.9 · Stock: 64"
+        - button "Agregar" [ref=e89] [cursor=pointer]
+      - article [ref=e90]:
+        - img "Knoll Saarinen Executive Conference Chair" [ref=e91]
+        - heading "Knoll Saarinen Executive Conference Chair" [level=3] [ref=e92]
+        - paragraph [ref=e93]: $499.99
+        - paragraph [ref=e94]: "Rating: 4.9 · Stock: 26"
+        - button "Agregar" [ref=e95] [cursor=pointer]
+      - article [ref=e96]:
+        - img "Wooden Bathroom Sink With Mirror" [ref=e97]
+        - heading "Wooden Bathroom Sink With Mirror" [level=3] [ref=e98]
+        - paragraph [ref=e99]: $799.99
+        - paragraph [ref=e100]: "Rating: 3.6 · Stock: 7"
+        - button "Agregar" [ref=e101] [cursor=pointer]
+      - article [ref=e102]:
+        - img "Apple" [ref=e103]
+        - heading "Apple" [level=3] [ref=e104]
+        - paragraph [ref=e105]: $1.99
+        - paragraph [ref=e106]: "Rating: 4.2 · Stock: 8"
+        - button "Agregar" [ref=e107] [cursor=pointer]
+      - article [ref=e108]:
+        - img "Beef Steak" [ref=e109]
+        - heading "Beef Steak" [level=3] [ref=e110]
+        - paragraph [ref=e111]: $12.99
+        - paragraph [ref=e112]: "Rating: 4.5 · Stock: 86"
+        - button "Agregar" [ref=e113] [cursor=pointer]
+      - article [ref=e114]:
+        - img "Cat Food" [ref=e115]
+        - heading "Cat Food" [level=3] [ref=e116]
+        - paragraph [ref=e117]: $8.99
+        - paragraph [ref=e118]: "Rating: 3.1 · Stock: 46"
+        - button "Agregar" [ref=e119] [cursor=pointer]
+      - article [ref=e120]:
+        - img "Chicken Meat" [ref=e121]
+        - heading "Chicken Meat" [level=3] [ref=e122]
+        - paragraph [ref=e123]: $9.99
+        - paragraph [ref=e124]: "Rating: 3.2 · Stock: 97"
+        - button "Agregar" [ref=e125] [cursor=pointer]
+      - article [ref=e126]:
+        - img "Cooking Oil" [ref=e127]
+        - heading "Cooking Oil" [level=3] [ref=e128]
+        - paragraph [ref=e129]: $4.99
+        - paragraph [ref=e130]: "Rating: 4.8 · Stock: 10"
+        - button "Agregar" [ref=e131] [cursor=pointer]
+      - article [ref=e132]:
+        - img "Cucumber" [ref=e133]
+        - heading "Cucumber" [level=3] [ref=e134]
+        - paragraph [ref=e135]: $1.49
+        - paragraph [ref=e136]: "Rating: 4.1 · Stock: 84"
+        - button "Agregar" [ref=e137] [cursor=pointer]
+      - article [ref=e138]:
+        - img "Dog Food" [ref=e139]
+        - heading "Dog Food" [level=3] [ref=e140]
+        - paragraph [ref=e141]: $10.99
+        - paragraph [ref=e142]: "Rating: 4.5 · Stock: 71"
+        - button "Agregar" [ref=e143] [cursor=pointer]
+      - article [ref=e144]:
+        - img "Eggs" [ref=e145]
+        - heading "Eggs" [level=3] [ref=e146]
+        - paragraph [ref=e147]: $2.99
+        - paragraph [ref=e148]: "Rating: 2.5 · Stock: 9"
+        - button "Agregar" [ref=e149] [cursor=pointer]
+      - article [ref=e150]:
+        - img "Fish Steak" [ref=e151]
+        - heading "Fish Steak" [level=3] [ref=e152]
+        - paragraph [ref=e153]: $14.99
+        - paragraph [ref=e154]: "Rating: 3.8 · Stock: 74"
+        - button "Agregar" [ref=e155] [cursor=pointer]
+      - article [ref=e156]:
+        - img "Green Bell Pepper" [ref=e157]
+        - heading "Green Bell Pepper" [level=3] [ref=e158]
+        - paragraph [ref=e159]: $1.29
+        - paragraph [ref=e160]: "Rating: 3.3 · Stock: 33"
+        - button "Agregar" [ref=e161] [cursor=pointer]
+      - article [ref=e162]:
+        - img "Green Chili Pepper" [ref=e163]
+        - heading "Green Chili Pepper" [level=3] [ref=e164]
+        - paragraph [ref=e165]: $0.99
+        - paragraph [ref=e166]: "Rating: 3.7 · Stock: 3"
+        - button "Agregar" [ref=e167] [cursor=pointer]
+      - article [ref=e168]:
+        - img "Honey Jar" [ref=e169]
+        - heading "Honey Jar" [level=3] [ref=e170]
+        - paragraph [ref=e171]: $6.99
+        - paragraph [ref=e172]: "Rating: 4.0 · Stock: 34"
+        - button "Agregar" [ref=e173] [cursor=pointer]
+      - article [ref=e174]:
+        - img "Ice Cream" [ref=e175]
+        - heading "Ice Cream" [level=3] [ref=e176]
+        - paragraph [ref=e177]: $5.49
+        - paragraph [ref=e178]: "Rating: 3.4 · Stock: 27"
+        - button "Agregar" [ref=e179] [cursor=pointer]
+      - article [ref=e180]:
+        - img "Juice" [ref=e181]
+        - heading "Juice" [level=3] [ref=e182]
+        - paragraph [ref=e183]: $3.99
+        - paragraph [ref=e184]: "Rating: 3.9 · Stock: 50"
+        - button "Agregar" [ref=e185] [cursor=pointer]
+      - article [ref=e186]:
+        - img "Kiwi" [ref=e187]
+        - heading "Kiwi" [level=3] [ref=e188]
+        - paragraph [ref=e189]: $2.49
+        - paragraph [ref=e190]: "Rating: 4.9 · Stock: 99"
+        - button "Agregar" [ref=e191] [cursor=pointer]
+  - complementary [ref=e198]:
+    - heading "Tu carrito" [level=2] [ref=e199]
+    - list [ref=e200]:
+      - listitem [ref=e201]:
+        - img "Essence Mascara Lash Princess" [ref=e202]
+        - generic [ref=e203]: Essence Mascara Lash Princess
+        - generic [ref=e204]: $9.99
+        - generic [ref=e205]:
+          - button "Quitar uno" [ref=e206]: "-"
+          - generic [ref=e207]: "1"
+          - button "Agregar uno" [ref=e208]: +
+        - button "Eliminar Essence Mascara Lash Princess" [ref=e209]: x
+      - listitem [ref=e210]:
+        - img "Eyeshadow Palette with Mirror" [ref=e211]
+        - generic [ref=e212]: Eyeshadow Palette with Mirror
+        - generic [ref=e213]: $19.99
+        - generic [ref=e214]:
+          - button "Quitar uno" [ref=e215]: "-"
+          - generic [ref=e216]: "1"
+          - button "Agregar uno" [ref=e217]: +
+        - button "Eliminar Eyeshadow Palette with Mirror" [ref=e218]: x
+      - listitem [ref=e219]:
+        - img "Chanel Coco Noir Eau De" [ref=e220]
+        - generic [ref=e221]: Chanel Coco Noir Eau De
+        - generic [ref=e222]: $129.99
+        - generic [ref=e223]:
+          - button "Quitar uno" [ref=e224]: "-"
+          - generic [ref=e225]: "1"
+          - button "Agregar uno" [ref=e226]: +
+        - button "Eliminar Chanel Coco Noir Eau De" [ref=e227]: x
+    - 'heading "Total: $114.79" [level=3] [ref=e228]'
+    - button "Pagar" [ref=e229] [cursor=pointer]

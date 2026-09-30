@@ -13,6 +13,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@playwright/cli": "^0.1.22",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
     "@vitejs/plugin-react": "^4.2.0",
     "vite": "^5.0.0"
   }
